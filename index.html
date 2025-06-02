@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Fantiny Raquely</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom right, #ffcce6, #ffb3d9);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            overflow: hidden;
+        }
+        h1 {
+            color: #d63384;
+            font-size: 2.5rem;
+        }
+        p {
+            max-width: 600px;
+            font-size: 1.2rem;
+            margin: 20px 0;
+        }
+        img {
+            width: 200px;
+            height: auto;
+            margin-top: 30px;
+        }
+        .heart {
+            position: fixed;
+            top: -50px;
+            font-size: 2rem;
+            color: #ff66a3;
+            animation: fall 5s linear infinite;
+            opacity: 0.8;
+        }
+        @keyframes fall {
+            to {
+                transform: translateY(110vh);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Eu amo uma pessoa chamada Fantiny Raquely</h1>
+    <p>
+        O que eu sinto por ela é algo que eu nunca senti antes. Ela me fez redescobrir o que é amar de verdade.
+        Mesmo com medo, eu fui, por causa dela. Porque ela é a minha luz, a pessoa com quem eu quero viver,
+        não importa o lugar ou o momento que estivermos passando. Eu só quero ela.
+    </p>
+    <p>
+        Eu amo a Fantiny e quero dar a ela todo o amor e carinho que existe. Quero que ela seja uma mulher feliz ao meu lado.
+    </p>
+    <p>
+        Sabe por que eu me apaixonei por você? Porque você foi simplesmente você! Você é incrível,
+        você me conquistou com seu jeito de ser. Seu olhar marcante foi me conquistando aos poucos.
+        Os dias foram passando e eu percebi que você estava em meus pensamentos, comecei a te enxergar
+        nas músicas que eu escutava, comecei a sorrir quando eu pensava em você. Meu coração já batia
+        mais forte ao ouvir sua voz. Eu não te garanto uma vida perfeita, mas eu garanto que vou ser sua base,
+        e que segurarei a sua mão quando tudo parecer sem saída. Eu garanto isso para você, amor.
+    </p>
+    <p>Com amor, Cerejo 💖</p>
+    <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Coração com amor">
+
+    <!-- Corações caindo -->
+    <script>
+        const hearts = [];
+        for (let i = 0; i < 20; i++) {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.innerText = '💖';
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            document.body.appendChild(heart);
+            hearts.push(heart);
+        }
+    </script>
+</body>
+</html>
